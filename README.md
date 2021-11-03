@@ -28,3 +28,13 @@ https://github.com/Kotlin/kotlinx.coroutines/issues/1204
 And eventually have ended up with the code in this repo.
 
 I feel like there are further optimisations to the test code. 
+
+# Testing
+
+Testing Kotlin flows is rather difficult. Not all Flows will terminate on completion, but a Flow that has not terminated will cause the error "This job has not completed yet".
+
+See the following posts for more info.
+
+https://medium.com/google-developer-experts/unit-testing-kotlin-flow-76ea5f4282c5
+
+https://developer.android.com/kotlin/flow/test
