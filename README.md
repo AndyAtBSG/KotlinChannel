@@ -13,6 +13,7 @@ Typical use case is when making a network request that will trigger a popup dial
 These two sources were very useful in understanding the solution:
 
 https://proandroiddev.com/android-singleliveevent-redux-with-kotlin-flow-b755c70bb055
+
 https://medium.com/androiddevelopers/a-safer-way-to-collect-flows-from-android-uis-23080b1f8bda
 
 
@@ -21,6 +22,7 @@ However, I was left with an issue, "This job has not completed yet", when runnin
 I started digging for a solution (see):
 
 https://stackoverflow.com/questions/61224047/unit-testing-coroutines-runblockingtest-this-job-has-not-completed-yet
+
 https://github.com/Kotlin/kotlinx.coroutines/issues/1204
 
 And eventually have ended up with the code in this repo.
