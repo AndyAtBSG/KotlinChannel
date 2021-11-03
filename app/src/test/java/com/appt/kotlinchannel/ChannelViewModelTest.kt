@@ -15,7 +15,7 @@ class ChannelViewModelTest {
     @get:Rule
     val coroutineScopeRule = MainCoroutineScopeRule()
 
-    private val viewModel = ChannelViewModel(coroutineScopeRule.dispatcher)
+    private val viewModel = ChannelViewModel()
 
     @Test
     fun shouldEmitDialogEvent_whenUserPressesButton() = runBlockingTest {
