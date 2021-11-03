@@ -18,18 +18,17 @@ class ChannelViewModelTest {
     private val viewModel = ChannelViewModel(coroutineScopeRule.dispatcher)
 
     @Test
-    fun shouldEmitDialogEvent_whenUserPressesButton() =
-        coroutineScopeRule.dispatcher.runBlockingTest {
-            var firedEvents: MainEvents? = null
+    fun shouldEmitDialogEvent_whenUserPressesButton() = runBlockingTest {
+        var firedEvents: MainEvents? = null
 
-            launch {
-                firedEvents = viewModel.events.first()
-            }
-
-            assertNull(firedEvents)
-
-            viewModel.someonePressedTheButton()
-
-            assertEquals(MainEvents.ShowDialog, firedEvents)
+        launch {
+            firedEvents = viewModel.events.first()
         }
+
+        assertNull(firedEvents)
+
+        viewModel.someonePressedTheButton()
+
+        assertEquals(MainEvents.ShowDialog, firedEvents)
+    }
 }
